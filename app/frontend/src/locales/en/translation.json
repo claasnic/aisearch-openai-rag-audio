@@ -1,14 +1,14 @@
 {
     "app": {
-        "title": "Talk to your data",
+        "title": "HDM Vertriebs Training bot",
         "footer": "Built with Azure AI Search + Azure OpenAI",
         "stopRecording": "Stop recording",
         "startRecording": "Start recording",
         "stopConversation": "Stop conversation"
     },
     "status": {
-        "notRecordingMessage": "Ask anything about Contoso employee benefits",
-        "conversationInProgress": "Conversation in progress"
+        "notRecordingMessage": "HDM Vertriebs Training bot",
+        "conversationInProgress": "Conversation gestartet"
     },
     "history": {
         "answerHistory": "Answer history",
