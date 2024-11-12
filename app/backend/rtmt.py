@@ -1,3 +1,4 @@
+import logging
 import aiohttp
 import asyncio
 import json
@@ -78,6 +79,7 @@ class RTMiddleTier:
                     session = message["session"]
                     # Hide the instructions, tools and max tokens from clients, if we ever allow client-side 
                     # tools, this will need updating
+                    session["voice"] = "Onyx"
                     session["instructions"] = ""
                     session["tools"] = []
                     session["tool_choice"] = "none"
@@ -163,8 +165,9 @@ class RTMiddleTier:
                         session["disable_audio"] = self.disable_audio
                     session["tool_choice"] = "auto" if len(self.tools) > 0 else "none"
                     session["tools"] = [tool.schema for tool in self.tools.values()]
+                    session["voice"] = "Onyx"
                     updated_message = json.dumps(message)
-
+                    logging.info(f"Updated session: {updated_message}")
         return updated_message
 
     async def _forward_messages(self, ws: web.WebSocketResponse):

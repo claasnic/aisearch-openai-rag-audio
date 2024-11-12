@@ -67,7 +67,7 @@ export default function useRealTime({
         const command: SessionUpdateCommand = {
             type: "session.update",
             session: {
-                voice: "ballad",
+                voice: "Onyx",
                 turn_detection: {
                     type: "server_vad"
                 }
