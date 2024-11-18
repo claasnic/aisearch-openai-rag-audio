@@ -13,7 +13,6 @@ export type HistoryItem = {
 export type SessionUpdateCommand = {
     type: "session.update";
     session: {
-        voice: "Onyx",
         turn_detection?: {
             type: "server_vad" | "none";
         };
